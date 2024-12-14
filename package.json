@@ -1,0 +1,55 @@
+{
+  "name": "handy-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:example": "pnpm --filter handy-ui-examples dev",
+    "build:example": "pnpm --filter handy-ui-examples build",
+    "preview:example": "pnpm --filter handy-ui-examples preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0 --cache",
+    "lint:fix": "pnpm run lint --fix",
+    "format": "prettier --write --cache .",
+    "prepare": "husky install",
+    "build": "vite build"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": [
+      "pnpm run lint",
+      "pnpm run format"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@types/node": "^22.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "highlight.js": "^11.10.0",
+    "husky": "^9.1.7",
+    "less": "^4.2.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2",
+    "unplugin-vue-define-options": "^1.5.2",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vitepress": "^1.5.0",
+    "vue-tsc": "^2.1.10"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "@handy-ui/components": "workspace:^"
+  }
+}
